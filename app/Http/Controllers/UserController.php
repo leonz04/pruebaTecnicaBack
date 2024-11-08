@@ -15,6 +15,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        
         // Validación de los datos recibidos
         $validatedData = $request->validate([
             'first_name' => 'required|regex:/^[A-Z]+$/|max:20',
@@ -24,7 +25,7 @@ class UserController extends Controller
             'country' => 'required|in:Colombia,Estados Unidos',
             'identification_type' => 'required|in:Cédula de Ciudadanía,Cédula de Extranjería,Pasaporte,Permiso Especial',
             'identification_number' => 'required|alpha_num|max:20|unique:users,identification_number',
-            'hire_date' => 'required|date|before_or_equal:today',
+            'hire_date' => 'required|date',
             'area' => 'required|in:Administración,Financiera,Compras,Infraestructura,Operación,Talento Humano,Servicios Varios',
             'status' => 'required|in:Activo',
         ]);
