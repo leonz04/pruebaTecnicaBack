@@ -29,7 +29,7 @@ class UserController extends Controller
                 'identification_type' => 'required|in:Cédula de Ciudadanía,Cédula de Extranjería,Pasaporte,Permiso Especial',
                 'identification_number' => 'required|alpha_num|max:20',
                 'hire_date' => 'required|date',
-                'area' => 'required|in:Administración,Financiera,Compras,Infraestructura,Operación,Talento Humano,Servicios Varios',
+                'area' => 'req  uired|in:Administración,Financiera,Compras,Infraestructura,Operación,Talento Humano,Servicios Varios',
                 'status' => 'required|in:Activo',
             ]);
 
