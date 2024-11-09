@@ -15,4 +15,4 @@ Route::prefix('v1')->group(function(){
     
     Route::apiResource('users',  UserController::class)->only(['index','store','update','destroy','show']);
 
-});
+}); 
